@@ -18,7 +18,8 @@
     "package": "yarn run build && build --publish never",
     "release": "build -mwl --draft",
     "dev": "concurrently --kill-others \"yarn run hot-server\" \"yarn run start-hot\"",
-    "postinstall": "concurrently \"node node_modules/fbjs-scripts/node/check-dev-engines.js package.json\""
+    "postinstall": "concurrently \"node node_modules/fbjs-scripts/node/check-dev-engines.js package.json\"",
+    "package-win": "electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=build/icon.ico --prune=true --out=release-builds --version-string.CompanyName=\"Custom by Thế Phúc\" --version-string.FileDescription=\"Ứng dụng tìm kiếm nhanh trong window\" --version-string.ProductName=\"Custom by Thế Phúc\""
   },
   "build": {
     "productName": "Cerebro",
@@ -145,8 +146,9 @@
     "css-loader": "0.23.1",
     "del": "2.2.0",
     "devtron": "1.2.0",
-    "electron-builder": "11.5.1",
     "electron": "1.6.2",
+    "electron-builder": "^17.0.1",
+    "electron-packager": "^8.6.0",
     "electron-rebuild": "1.5.7",
     "eslint": "2.10.2",
     "eslint-config-airbnb": "9.0.1",

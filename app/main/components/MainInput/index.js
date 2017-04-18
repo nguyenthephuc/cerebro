@@ -8,7 +8,7 @@ class MainInput extends Component {
   render() {
     return (
       <input
-        placeholder="Cerebro Search"
+        placeholder="Tìm kiếm nhanh"
         type="text"
         id="main-input"
         ref="input"
